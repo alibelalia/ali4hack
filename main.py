@@ -27,7 +27,7 @@ def main():
        }--------{+}  GitHub.com/alibelalia/ali4hack  {+}--------{
     ''' + color.END)
     try:
-        print(''''
+        print('''
         {1} Information Gathering
         {2} Password Attack
         {3} Wireless Tools

@@ -38,11 +38,11 @@ def info():
         ''')
         choice = input("Enter Your Choice: ")
         if choice=='1':
-            os.system("apt-get install nmap -y && nmap -h")
+            os.system("sudo apt-get install nmap -y && nmap -h")
 
             info()
         elif choice=='2':
-            os.system("git clone https://github.com/trustedsec/social-engineer-toolkit.git")
+            os.system("sudo git clone https://github.com/trustedsec/social-engineer-toolkit.git")
             info()
         elif choice=='3':
             os.system("clear")
@@ -59,19 +59,19 @@ def info():
             print("your Target IP: ", ip)
             sys.exit()
         elif choice=='4':
-            os.system("git clone https://github.com/wpscanteam/wpscan.git")
+            os.system("sudo git clone https://github.com/wpscanteam/wpscan.git")
             info()
         elif choice=='5':
-            os.system("git clone https://github.com/Dionach/CMSmap.git")
+            os.system("sudo git clone https://github.com/Dionach/CMSmap.git")
             info()
         elif choice=='6':
-            os.system("git clone https://github.com/UltimateHackers/XSStrike.git")
+            os.system("sudo git clone https://github.com/UltimateHackers/XSStrike.git")
             info()
         elif choice=='7':
-            os.system("git clone https://github.com/AeonDave/doork.git")
+            os.system("sudo git clone https://github.com/AeonDave/doork.git")
             info()
         elif choice=='8':
-            os.system("git clone https://github.com/Manisso/Crips.git")
+            os.system("sudo git clone https://github.com/Manisso/Crips.git")
             info()
         elif choice=='9':
             print("Exiting...")
@@ -103,10 +103,10 @@ def passattack():
         {3}--Exit''')
         choice2 = input("Enter Your Choice: ")
         if choice2=='1':
-            os.system("git clone https://github.com/Mebus/cupp.git")
+            os.system("sudo git clone https://github.com/Mebus/cupp.git")
             passattack()
         elif choice2=='2':
-            os.system("git clone https://github.com/1N3/BruteX.git")
+            os.system("sudo git clone https://github.com/1N3/BruteX.git")
             passattack()
         elif choice2=='3':
             print("Good Bye....See You Later...")
@@ -141,10 +141,10 @@ __        ___          _
         {3}-Exit ''')
         choice3 = input("Enter Your Choice: ")
         if choice3=='1':
-            os.system("apt-get install reaver -y")
+            os.system("sudo apt-get install reaver -y")
             wireless()
         elif choice3=='2':
-            os.system("apt-get install pixiewps -y")
+            os.system("sudo apt-get install pixiewps -y")
             wireless()
         elif choice3=='3':
             print("Exiting.....")
@@ -180,26 +180,26 @@ def expl():
         {9}--Exit....''')
         choice4 = input("Enter Your Choice: ")
         if choice4=='1':
-            os.system("git clone https://github.com/AlisamTechnology/ATSCAN.git && cd ATSCAN && perl atscan.pl")
+            os.system("sudo git clone https://github.com/AlisamTechnology/ATSCAN.git && cd ATSCAN && sudo perl atscan.pl")
             sys.exit()
         elif choice4=='2':
             print ("usage: python sqlmap.py -h")
             time.sleep(3)
-            os.system("apt-get install sqlmap -y")
+            os.system("sudo apt-get install sqlmap -y")
             sys.exit()
         elif choice4=='3':
             print ("Automated All-in-One OS Command Injection and Exploitation Tool.")
             print ("usage: commix.py --help")
             time.sleep(3)
-            os.system("apt-get install commix")
+            os.system("sudo apt-get install commix")
             sys.exit()
         elif choice4=='4':
             print("Abusing authentication bypass of Open&Compact (Gabriel's)")
-            os.system("wget http://pastebin.com/raw/Szg20yUh --output-document=gabriel.py")
+            os.system("sudo wget http://pastebin.com/raw/Szg20yUh --output-document=gabriel.py")
             os.system("clear")
-            os.system("python2 gabriel.py")
+            os.system("sudo python2 gabriel.py")
             ftpbypass = input("Enter Target IP and Use Command:")
-            os.system("python gabriel.py %s" % ftpbypass)
+            os.system("sudo python gabriel.py %s" % ftpbypass)
             sys.exit()
         elif choice4=='5':
             os.system("clear")
@@ -207,25 +207,25 @@ def expl():
             print ("deployed, the script uses its upload and command execution capability to")
             print ("provide an interactive session.")
             print ("")
-            os.system("git clone https://github.com/SpiderLabs/jboss-autopwn.git")
+            os.system("sudo git clone https://github.com/SpiderLabs/jboss-autopwn.git")
             sys.exit()
         elif choice4=='6':
             print("This tool will only work on blind sql injection")
             cbsq = input("select target: ")
-            os.system("wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/bsqlbf-v2/bsqlbf-v2-7.pl -o bsqlbf.pl")
-            os.system("perl bsqlbf.pl -url %s" % cbsq)
-            os.system("rm bsqlbf.pl")
+            os.system("sudo wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/bsqlbf-v2/bsqlbf-v2-7.pl -o bsqlbf.pl")
+            os.system("sudo perl bsqlbf.pl -url %s" % cbsq)
+            os.system("sudo rm bsqlbf.pl")
         elif choice4=='7':
             key = input("Enter the android hash: ")
             salt = input("Enter the android salt: ")
-            os.system("git clone https://github.com/PentesterES/AndroidPINCrack.git")
-            os.system("cd AndroidPINCrack && python AndroidPINCrack.py -H %s -s %s" % (key, salt))
+            os.system("sudo git clone https://github.com/PentesterES/AndroidPINCrack.git")
+            os.system("cd AndroidPINCrack && sudo python AndroidPINCrack.py -H %s -s %s" % (key, salt))
             sys.exit()
         elif choice4=='8':
             print("your target must be Joomla, Mambo, PHP-Nuke, and XOOPS Only ")
-            target = raw_input("Select a target: ")
-            os.system("wget https://dl.packetstormsecurity.net/UNIX/scanners/cms_few.py.txt -O cms.py")
-            os.system("python cms.py %s" % target)
+            target = input("Select a target: ")
+            os.system("sudo wget https://dl.packetstormsecurity.net/UNIX/scanners/cms_few.py.txt -O cms.py")
+            os.system("sudo python cms.py %s" % target)
             sys.exit()
         elif choice4=='9':
             print("Good...Bye..See You Later....")
@@ -261,32 +261,32 @@ def sniffingSpoofing():
             ''')
         choice5 = input("Enter Your Choice: ")
         if choice5=='1':
-            os.system("git clone https://github.com/trustedsec/social-engineer-toolkit.git")
-            os.system("apt-get --force-yes -y install git apache2 python-requests libapache2-mod-php \
+            os.system("sudo git clone https://github.com/trustedsec/social-engineer-toolkit.git")
+            os.system("sudo apt-get --force-yes -y install git apache2 python-requests libapache2-mod-php \
                         python-pymssql build-essential python-pexpect python-pefile python-crypto python-openssl")
-            os.system("cd social-engineer-toolkit && python setup.py install")
+            os.system("cd social-engineer-toolkit && sudo python setup.py install")
         elif choice5=='2':
             print('''sslstrip is a MITM tool that implements Moxie Marlinspike's SSL stripping
             attacks.
             It requires Python 2.5 or newer, along with the 'twisted' python module.''')
             fff = input("Do You Want To Continue (y/n)")
             if fff=='y' or 'Y':
-                os.system("git clone --depth=1 https://github.com/moxie0/sslstrip.git")
-                os.system("apt-get install python-twisted-web")
-                os.system("python sslstrip/setup.py")
+                os.system("sudo git clone --depth=1 https://github.com/moxie0/sslstrip.git")
+                os.system("sudo apt-get install python-twisted-web")
+                os.system("sudo python sslstrip/setup.py")
             elif fff=='n' or (N):
                 sniffingSpoofing()
             else:
                 sniffingSpoofing()
             
         elif choice5=='3':
-            os.system("wget http://pastebin.com/raw/DDVqWp4Z --output-document=pisher.py")
+            os.system("sudo wget http://pastebin.com/raw/DDVqWp4Z --output-document=pisher.py")
             os.system("clear")
-            os.system("python2 pisher.py")
+            os.system("sudo python2 pisher.py")
         elif choice5=='4':
-            os.system("wget http://pastebin.com/raw/Nz1GzWDS --output-document=smtp.py")
+            os.system("wsudo get http://pastebin.com/raw/Nz1GzWDS --output-document=smtp.py")
             os.system("clear")
-            os.system("python2 smtp.py")
+            os.system("sudo python2 smtp.py")
         elif choice5=='5':
             print("Good...Bye...See You Later.......")
             time.sleep(4)
@@ -318,16 +318,16 @@ def postexploitation():
         ''')
         choice6 = input("Enter Your Choice: ")
         if choice6=='1':
-            os.system("wget http://pastebin.com/raw/Y0cqkjrj --output-document=ch01.py")
+            os.system("sudo wget http://pastebin.com/raw/Y0cqkjrj --output-document=ch01.py")
             os.system("clear")
-            os.system("python ch01.py")
+            os.system("sudo python ch01.py")
         elif choice6=='2':
             print("POET is a simple POst-Exploitation Tool.\n")
-            os.system("git clone --depth=1 https://github.com/mossberg/poet.git")
-            os.system("python poet/server.py")
+            os.system("sudo git clone --depth=1 https://github.com/mossberg/poet.git")
+            os.system("sudo python poet/server.py")
         elif choice6=='3':
             print("HTTP server for phishing in python. (and framework) Usually you will want to run Weeman with DNS spoof attack. (see dsniff, ettercap).")
-            os.system("git clone --depth=1 https://github.com/samyoyo/weeman.git && cd weeman && python weeman.py")
+            os.system("sudo git clone --depth=1 https://github.com/samyoyo/weeman.git && cd weeman && python weeman.py")
         elif choice6=='4':
             print("Good..Bye....See You Later.....")
             time.sleep(4)
